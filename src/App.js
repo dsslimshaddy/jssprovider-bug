@@ -18,7 +18,7 @@ import preset from 'jss-preset-default';
 import { Paper } from 'material-ui';
 
 jss.setup(preset())
-//jss.options.createGenerateClassName = createGenerateClassName
+jss.options.createGenerateClassName = createGenerateClassName
 jss.options.insertionPoint = 'jss'
 
 class BasicExample extends React.Component{
