@@ -16,19 +16,26 @@ const styleSheet = theme => ({
   }
 });
 
-function SwitchButton(props) {
-  const {classes} = props;
-  return (
-    <Paper className={`${classes.root} ${classes.boot}`}>
-       Im red background blue text
-       <Div3 />
-       <Link to="/red">GOTO /red</Link>
-    </Paper>
-  );
+class Div1 extends React.Component{
+  constructor(props){
+    super(props);
+   this.state = {
+      show: false
+   }
+  }
+  render(){
+   const {classes} = this.props;
+   return (
+     <Paper className={`${classes.root} ${classes.boot}`} onClick={()=>{
+            this.setState({show: true })
+        }}>
+        {(this.state.show) ? <Div3 /> : null}
+        Im red background blue text
+        <Div3 />
+        <Link to="/red">GOTO /red</Link>
+     </Paper>
+   );
+ } 
 }
 
-SwitchButton.propTypes = {
-  classes: PropTypes.object.isRequired
-};
-
-export default withStyles(styleSheet)(SwitchButton);
+export default withStyles(styleSheet)(Div1);

@@ -6,7 +6,7 @@ import { styleSheet } from './constant.js';
 import { Paper } from 'material-ui';
 import { Link } from 'react-router-dom';
 
-function SwitchButton(props) {
+function Div2(props) {
   const {classes} = props;
   return (
     <Paper className={classes.root}>
@@ -17,8 +17,4 @@ function SwitchButton(props) {
   );
 }
 
-SwitchButton.propTypes = {
-  classes: PropTypes.object.isRequired
-};
-
-export default withStyles(styleSheet)(SwitchButton);
+export default withStyles(styleSheet)(Div2);
